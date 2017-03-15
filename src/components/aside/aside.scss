@@ -1,0 +1,116 @@
+#produkty {
+  background: $primary;
+
+  .prod-block {
+    padding: 2em 0;
+    border-bottom: 1px solid $white;
+    color: $white;
+    display: table;
+    width: 100%;
+    height: calc(100vh - 70px);
+
+    .pb-image {
+      width: 50%;
+      height: 100%;
+      position: relative;
+
+      img {
+        max-height: 75%;
+        max-width: 100%;
+        display: table;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .pb-image.right{
+      float: right;
+    }
+    .pb-image.left{
+      float: left;
+    }
+    .pb-content {
+      position: relative;
+      width: 50%;
+      height: 100%;
+      float: left;
+
+      .pb-text {
+        display: table;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        h3 {
+          font-size: 32px;
+          margin: 0;
+        }
+
+        p {
+          font-size: 18px;
+          margin: 20px 0 0;
+        }
+      }
+    }
+  }
+
+  .prod-block:last-of-type {
+    border-bottom: none;
+  }
+}
+@media screen and (max-width: 600px){
+  #produkty {
+
+    .prod-block {
+      padding: 2em 0;
+      height: auto;
+
+      .pb-image {
+        width: 100%;
+        height: auto;
+        position: relative;
+
+        img {
+          max-height: 75%;
+          max-width: 70%;
+          display: table;
+          position: relative;
+          top: 0%;
+          left: 0%;
+          transform: none;
+          margin: 0 auto 1em;
+        }
+      }
+      .pb-image.right{
+        float: none;
+      }
+      .pb-image.left{
+        float: none;
+      }
+      .pb-content {
+        position: relative;
+        width: 100%;
+        height: auto;
+        float: none;
+
+        .pb-text {
+          display: table;
+          position: relative;
+          top: 0;
+          transform: none;
+          text-align: center;
+
+          h3 {
+            font-size: 20px;
+          }
+
+          p {
+            font-size: 15px;
+            margin: 15px 0 0;
+          }
+        }
+      }
+    }
+  }
+}

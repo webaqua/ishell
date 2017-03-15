@@ -1,13 +1,11 @@
 .footer-2 {
-
-  background: $footer_menu_footer_background;
-  display: inline-block;
-  padding: $footer_menu_base_spacing;
+  background: $secondary;
+  display: table;
+  padding: 0 2em;
   width: 100%;
 
   .footer-logo {
-    margin-bottom: 1em;
-    margin-right: 1em;
+    margin-bottom: 2em;
 
     @include media($footer_menu_large_screen) {
       float: left;
@@ -16,12 +14,13 @@
   }
 
   .footer-logo img {
-    height: 1.6em;
+    height: 70px;
+    padding: .8em 0;
   }
 
   ul {
     line-height: 1.5em;
-    margin: 0 0 1em 0;
+    margin: 1.5em 0 0 0;
     padding: 0;
 
     @include media($footer_menu_large_screen) {
@@ -35,6 +34,7 @@
   ul li {
     list-style: none;
     padding-right: 1em;
+    color: $white;
 
     @include media($footer_menu_large_screen) {
       display: inline;
@@ -43,12 +43,12 @@
   }
 
   ul li a {
-    color: $footer_menu_footer_link_color;
+    color: $white;
     text-decoration: none;
 
     &:focus,
     &:hover {
-      color: transparentize($footer_menu_footer_color, 0);
+      color: transparentize($white, 0);
     }
   }
 
@@ -62,11 +62,10 @@
     }
 
     ul.footer-social {
-      margin: 1em 0 0 0;
+      margin: 1.5em 0 0 0;
 
       @include media($footer_menu_large_screen) {
         float: right;
-        margin-top: 0;
       }
 
       li {
@@ -91,6 +90,25 @@
           opacity: 1;
         }
       }
+    }
+  }
+}
+@media screen and (max-width: 900px){
+  .footer-2 {
+    padding: 0 1em;
+
+    ul {
+      margin: 0;
+    }
+    .footer-logo {
+      margin-bottom: 0;
+    }
+    .footer-secondary-links {
+      text-align: center;
+    }
+    .footer-secondary-links ul.footer-social {
+      margin: 0.5em auto;
+      display: table;
     }
   }
 }

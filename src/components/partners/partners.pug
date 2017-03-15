@@ -1,0 +1,42 @@
+#partners
+  .section
+    h5 
+      | Термочехлами ТМ iSHELL 
+      br
+      | пользуются:
+    .owl-carousel.owl-theme
+      .item
+        .partner
+          img(src='/images/partn1.png')
+      .item
+        .partner
+          img(src='/images/partn2.png')
+      .item
+        .partner
+          img(src='/images/partn3.png')
+      .item
+        .partner
+          img(src='/images/partn4.png')
+      .item
+        .partner
+          img(src='/images/partn5.png')
+      .item
+        .partner
+          img(src='/images/partn6.png')
+    script.
+      $('.owl-carousel').owlCarousel({
+      loop:true,
+      margin:10,
+      nav:true,
+      responsive:{
+      0:{
+      items:2
+      },
+      600:{
+      items:4
+      },
+      1000:{
+      items:6
+      }
+      }
+      })

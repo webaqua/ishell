@@ -1,40 +1,33 @@
 header.navigation(role='banner')
-	.navigation-wrapper
-		a.logo(href='javascript:void(0)')
-			img(src='https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png', alt='Logo Image')
-		a#js-mobile-menu.navigation-menu-button(href='javascript:void(0)') MENU
-		nav(role='navigation')
-			ul#js-navigation-menu.navigation-menu.show
-				li.nav-link
-					a(href='javascript:void(0)') Products
-				li.nav-link
-					a(href='javascript:void(0)') About Us
-				li.nav-link
-					a(href='javascript:void(0)') Contact
-				li#js-navigation-more.nav-link.more
-					a(href='javascript:void(0)') More
-					ul.submenu
-						li
-							a(href='javascript:void(0)') Submenu Item
-						li
-							a(href='javascript:void(0)') Another Item
-						li.more
-							a(href='javascript:void(0)') Item with submenu
-							ul.submenu
-								li
-									a(href='javascript:void(0)') Sub-submenu Item
-								li
-									a(href='javascript:void(0)') Another Item
-						li.more
-							a(href='javascript:void(0)') Another submenu
-							ul.submenu
-								li
-									a(href='javascript:void(0)') Sub-submenu
-								li
-									a(href='javascript:void(0)') An Item
-		.navigation-tools
-			.search-bar
-				form(role='search')
-					input(type='search', placeholder='Enter Search')
-					button(type='submit')
-						img(src='https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png', alt='Search Icon')
+	.section
+		.navigation-wrapper
+			a.logo(href='javascript:void(0)')
+				img(src='/images/logo.svg', alt='Logo Image')
+			a#js-mobile-menu.navigation-menu-button(href='javascript:void(0)') MENU
+			nav(role='navigation')
+				ul#js-navigation-menu.navigation-menu.show
+					li.nav-link
+						a(href='javascript:void(0)') О продукции
+					li.nav-link
+						a(href='javascript:void(0)') Для арматуры
+					li.nav-link
+						a(href='javascript:void(0)') Для оборудования
+					li.nav-link
+						a(href='javascript:void(0)') Спец. продукты
+					li.nav-link
+						a(href='javascript:void(0)') Услуги
+					li.nav-link
+						a(href='javascript:void(0)') FAQ
+			.navigation-tools
+				.modal
+					label(for='modal-1')
+						.modal-trigger Контакты
+					input#modal-1.modal-state(type='checkbox')
+					.modal-fade-screen
+						.modal-inner
+							.modal-close(for='modal-1')
+							h1 Modal Title
+							p.modal-intro
+								| Intro text lorem ipsum dolor sit ametm, quas, eaque facilis aliquid cupiditate tempora cumque ipsum accusantium illo modi commodi  minima.
+							p.modal-content
+								| Body text lorem ipsum dolor ipsum dolor sit sit possimus amet, consectetur adipisicing elit. Itaque, placeat, explicabo, veniam quos aperiam molestias eriam molestias molestiae suscipit ipsum enim quasi sit possimus quod atque nobis voluptas earum odit accusamus quibusdam. Body text lorem ipsum dolor ipsum dolor sit sit possimus amet.

@@ -1,9 +1,12 @@
 header.navigation {
-  background-color: $nav_menu_navigation_background;
-  border-bottom: 1px solid darken($nav_menu_navigation_background, 10);
+  background-color: rgba(255, 255, 255, 1.0);
   min-height: $nav_menu_navigation_height;
   width: 100%;
-  z-index: 999;
+  z-index: 99999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.20);
 
   .navigation-wrapper {
     @include clearfix;
@@ -14,11 +17,11 @@ header.navigation {
   .logo {
     float: left;
     max-height: $nav_menu_navigation_height;
-    padding-left: $nav_menu_navigation_padding;
+    padding-left: 0;
     padding-right: 2em;
 
     img {
-      max-height: $nav_menu_navigation_height;
+      height: $nav_menu_navigation_height;
       padding: 0.8em 0;
     }
   }
@@ -98,12 +101,17 @@ header.navigation {
       line-height: $nav_menu_navigation_height;
       text-decoration: none;
       width: auto;
+      @media screen and (max-width: 900px){
+        line-height: 40px;
+      }
     }
 
     a {
       color: $nav_menu_navigation_color;
       display: inline-block;
       text-decoration: none;
+      font-size: 15px;
+      font-weight: 700;
 
       @include media ($nav_menu_horizontal_bar_mode) {
         padding-right: 1em;
@@ -264,6 +272,17 @@ header.navigation {
       background: transparent;
       clear: none;
       float: right;
+    }
+
+    @media screen and (max-width: 900px){
+      background: none;
+      display: table;
+      height: auto;
+      float: right;
+
+      .modal .modal-trigger {
+        margin: 0 0 15px;
+      }
     }
   }
 
